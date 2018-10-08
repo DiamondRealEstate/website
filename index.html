@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Diamond Real Estate (DRE)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://dretoken.com/img/img-logo.png?cache=86068" >
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://dretoken.com/css/bootstrap.min.css?cache=86068">
+        <link rel="stylesheet" href="https://dretoken.com/css/template.css?cache=86068">
+        <link rel="stylesheet" href="https://dretoken.com/css/custom.css?cache=86068">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://dretoken.com/js/imagesloaded.min.js?cache=86068"></script>
+        <script src="https://dretoken.com/js/navigation.js?cache=86068"></script>
+        <script src="https://dretoken.com/js/navigation.fixed.js?cache=86068"></script>
+        <script src="https://dretoken.com/js/navigation.scrollspy.js?cache=86068"></script>
+        <script src="https://dretoken.com/js/particleground.min.js?cache=86068"></script>
+        <script src="https://dretoken.com/js/main.js?cache=86068"></script>
+        <script src="https://dretoken.com/js/custom.js?cache=86068"></script>
+    </head>
+    <body>
+        <div class="loader">
+            <div class="cp-spinner cp-skeleton"></div>
+        </div>
+        <div class="container">
+            <nav id="navigation" class="navigation">
+                <div class="nav-header">
+                    <a class="nav-brand" href="https://dretoken.com"><img src="https://dretoken.com/img/img-logo.png?cache=86068" width="100px" height="100px" /></a>
+                    <div class="nav-toggle"></div>
+                </div>
+                <div class="nav-menus-wrapper">
+                    <ul class="nav-menu nav-menu-centered">
+                        <li class="active"><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#token">TOKEN DETAIL</a></li>
+                        <li><a href="#roadmap">ROADMAP</a></li>
+                        <li><a href="#team">OUR TEAM</a></li>
+                        <li><a href="#exchange">EXCHANGE</a></li>
+                        <li><a href="https://dretoken.com/DRE-Whitepaper.pdf" target="_blank">WHITEPAPER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <header id="home" class="animated text-center text-lg-left">
+            <div class="cover"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <div class="row text-center">
+                            <div id="clockdiv" class="display-4 text-center" style="text-align: center;">
+                                <div>
+                                    <span class="days"></span>
+                                    <div class="smalltext">Days</div>
+                                </div>
+                                <div>
+                                    <span class="hours"></span>
+                                    <div class="smalltext">Hours</div>
+                                </div>
+                                <div>
+                                    <span class="minutes"></span>
+                                    <div class="smalltext">Minutes</div>
+                                </div>
+                                <div>
+                                    <span class="seconds"></span>
+                                    <div class="smalltext">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <iframe style="padding: 25px;" width="560" height="315" src="https://www.youtube.com/embed/QJ6agWnvWH0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-left" style="background: rgba(0, 0, 0, 0.6); padding: 24px; border: none; border-radius: 12px;">
+                        <h5 class="display-5">How to buy DRE Token?</h5>
+                        <li>1. Use ERC-20 wallet (not use exchange wallet)</li>
+                        <li>
+                            <img src="https://dretoken.com/img/erc20-wallet/1.png?cache=86068" />
+                            <img src="https://dretoken.com/img/erc20-wallet/2.png?cache=86068" />
+                            <img src="https://dretoken.com/img/erc20-wallet/3.png?cache=86068" />
+                            <img src="https://dretoken.com/img/erc20-wallet/4.png?cache=86068" />
+                            <img src="https://dretoken.com/img/erc20-wallet/5.png?cache=86068" />
+                        </li>
+                        <li>2. Set GAS fee as 100000 gwei</li>
+                        <li>3. Send your ETH to this Contract Address then We auto return DRE Token</li>
+                        <li><input id="contract_address" type="text" value="0xfC5621c3ddEE2F6CBfD5A8E5CD2eA6aFC0f4CBEc" style="width: 85%; text-align: center; border: 1px solid #fff; border-radius: 6px;"> <button class="btn-copy" onclick="copy();">Copy</button></li>
+                        <li><a href="https://etherscan.io/token/0xfC5621c3ddEE2F6CBfD5A8E5CD2eA6aFC0f4CBEc" target="_blank" style="color: #2F9CFD;">View on Etherscan</a></li>
+                        <script>
+                            function copy() {
+                                var copyText = document.getElementById("address");
+                                copyText.select();
+                                document.execCommand("copy");
+                                alert("Copied");
+                            }
+                        </script>
+                        <h4>Token price: 1 ETH = 20,000,000 DRE</h4>
+                        <div class="sold-bar">
+                            <div id="sold" class="bar"></div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="text-left b">Value</td>
+                                <td class="text-right b">Bonus</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">4 ETH</td>
+                                <td class="text-right">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">1 ETH</td>
+                                <td class="text-right">20%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">0.5 ETH</td>
+                                <td class="text-right">10%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">0.01 ETH (Minimum)</td>
+                                <td class="text-right">0%</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <h5 class="display-5">When ICO end, DRE Token will be list on:</h5>
+                        <li>
+                            <img src="https://dretoken.com/img/exchange/1.png?cache=86068" />
+                            <img src="https://dretoken.com/img/exchange/2.png?cache=86068" />
+                            <img src="https://dretoken.com/img/exchange/3.png?cache=86068" />
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <section id="about" class="section text-center">
+				<div class="container section">
+					<h2>ABOUT US</h2>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+                            <img class="w-100" src="https://dretoken.com/img/img-about-us.png?cache=86068" style="padding: 100px;" />
+                        </div>
+						<div class="col-lg-6">
+                            <p style="text-align: justify; font-size: 16px;">
+                                Cryptoproperties Diamond Real Estate (DRE) aims to eliminate the largest inefficiencies associated with residential real estate transactions. By integrating blockchain technology into its proprietary plug-and-play transaction management platform, Diamond Real Estate strives to deliver an unprecedented level of trust and transparency to transactional real estate. Execution of the business is simplified by partnering with existing property portals and brokerages around the world, accelerating our speed to market while helping our partners increase their revenue opportunities and competitive differentiation
+                            </p>
+                            <ul style="text-align: left;">
+                                <li class="li">Blockchain-authenticated documents</li>
+                                <li class="li">Smart contract escrows</li>
+                                <li class="li">Process automation</li>
+                                <li class="li">Options to choose user-rated service providers</li>
+                            </ul>
+						</div>
+					</div>
+				</div>
+			</section>
+            <section id="token" class="section text-center">
+                <div class="container section">
+                    <h2>TOKEN DETAIL</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>     
+                        </div>
+                        <div class="col-lg-6">
+                            <table>
+                                <tr>
+                                    <td class="text-left">Network</td>
+                                    <td class="text-right">Ethereum</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Token name</td>
+                                    <td class="text-right">Diamond Real Estate</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Symbol</td>
+                                    <td class="text-right">DRE</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Total supply</td>
+                                    <td class="text-right">15.000.000.000 DRE</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Decimal</td>
+                                    <td class="text-right">18</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Start ICO</td>
+                                    <td class="text-right">Oct 10, 2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">End ICO</td>
+                                    <td class="text-right">Oct 30, 2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Sort cap</td>
+                                    <td class="text-right">150 ETH</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Hard cap</td>
+                                    <td class="text-right">450 ETH</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="roadmap" class="section text-center">
+                <div class="container section">
+                    <h2>ROADMAP</h2>
+                </div>
+                <div class="container">
+                    <div class="roadmap">
+                        <div class="container-roadmap left">
+                            <div class="content">
+                                <h4>April-June 2018</h4>
+                                <p>Project Research/Team Formation</p>
+                            </div>
+                        </div>
+                        <div class="container-roadmap right">
+                            <div class="content">
+                                <h4>July-September 2018</h4>
+                                <p>Project & Website Development</p>
+                            </div>
+                        </div>
+                        <div class="container-roadmap left">
+                            <div class="content">
+                                <h4>Early October 2018</h4>
+                                <p>
+                                    <li>Token launch</li>
+                                    <li>Selfdrop Begins</li>
+                                    <li>Start Airdrop</li>
+                                    <li>Release Of Whitepaper</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container-roadmap right">
+                            <div class="content">
+                                <h4>Late October 2018</h4>
+                                <p>
+                                    <li>Closing of selfdrop</li>
+                                    <li>Airdrop Distribution</li>
+                                    <li>Listing on exchanges</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container-roadmap left">
+                            <div class="content">
+                                <h4>November 2018</h4>
+                                <p>
+                                    <li>Listing on More Exchanges</li>
+                                    <li>Partnership Announcement</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container-roadmap right">
+                            <div class="content">
+                                <h4>December 2018</h4>
+                                <p>
+                                    <li>Release Demo APP of DRE Marketplace</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container-roadmap left">
+                            <div class="content">
+                                <h4>Q1 2019</h4>
+                                <p>
+                                    <li>Realease APP of GRE Marketplace</li>
+                                    <li>Going viral around Western Europe</li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="team" class="team section text-center">
+                <div class="container section">
+                    <h2>OUR TEAM</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/1.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Antoine Morel</span>
+                                    <span class="position mb-3 w-100 d-block">CEO/Co-Founder</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/AntoinMorel" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/antoine-morel-045503172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He is passionately committed to building
+                                        the privacy-focused, democratized Web 3.0
+                                        infrastructure of the future using distributed
+                                        technologies like the Blockchain. Programmer,
+                                        writer, tokenomics strategist, advisor, crypto enthusiast, and investor
+                                        since 2013
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/2.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Aldrich Rousseau</span>
+                                    <span class="position mb-3 w-100 d-block">CPO/Co-Founder</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/AldrichRoussea" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/aldrich-rousseau-597475172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He studied Mathematics and Electrical
+                                        Engineering & Computer Science at UC
+                                        Berkeley. During his undergraduate career,
+                                        Aldrich spearheaded and developed many of
+                                        the features, algorithms, and innovations that
+                                        exist in DRE today
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/3.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Bernard Jeanr</span>
+                                    <span class="position mb-3 w-100 d-block">CTO</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/BernardJeanr" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/bernard-jeanr-27a666172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He is a product security expert, with
+                                        experience in web, distributed systems,
+                                        entrepreneurship, and cryptography. He also is
+                                        a smart contract auditor and white hat hacker
+                                        at organizations such as Google, Oraclize, and
+                                        Gitlab
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/4.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Alizébe Garcia</span>
+                                    <span class="position mb-3 w-100 d-block">CFO</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/AlizebeGarcia" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/aliz%C3%A9be-garcia-34b666172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        With 20 years as a C-level executive in
+                                        corporate finance for multinational and publicly
+                                        listed companies, and having served as board
+                                        member in the banking and non-profit sectors,
+                                        Alizébe brings her knowledge and experience
+                                        to ventures leveraging new technologies to
+                                        improve ways value is created and shared
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/5.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Edgard Roux</span>
+                                    <span class="position mb-3 w-100 d-block">CMO</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/EdgardRoux" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/edgard-roux-a1a666172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He is an experienced digital marketer
+                                        focused on building brands in evolving
+                                        industries. In 2014, he founded 41Collective
+                                        LLC, an independent marketing firm with
+                                        clients in the blockchain, music,
+                                        and eCommerce sectors. Edgard is a
+                                        cryptocurrency enthusiast and created ICO
+                                        Informer, a vibrant channel that highlights
+                                        important developments in the blockchain space
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/6.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Karamoko Dembélé</span>
+                                    <span class="position mb-3 w-100 d-block">COO</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/KaramokoDemb" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/karamoko-demb%C3%A9l%C3%A9-a60666172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He is Head of Operations at DRE. He
+                                        has consulted numerous blockchain
+                                        projects in an operations, strategy, and
+                                        marketing capacity. He also co-founded
+                                        Cointemporary, the first Bitcoin gallery.
+                                        Edgard has a background in
+                                        Communication Design and is passionate
+                                        about the role UX will play for blockchain and web 3.0
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="container section">
+                            <h2>ADVISORS</h2>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/7.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Marshal Bertrand</span>
+                                    <span class="position mb-3 w-100 d-block">Head of PR</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/MarshalBertran" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/marshal-bertrand-116668172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He is Head of PR at Sapien. He is a
+                                        strategic relationship builder and is a
+                                        veteran in digital marketing for blockchain,
+                                        e-commerce and information technology
+                                        industries. He is passionate about
+                                        cryptocurrencies and dreams of one day being a crypto whale
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card border-0 mb-5 mb-lg-0">
+                                <img class="card-img-top" src="https://dretoken.com/img/team/8.png?cache=86068">
+                                <div class="card-body">
+                                    <span class="name w-100 d-block">Martin Lucianoru</span>
+                                    <span class="position mb-3 w-100 d-block">Senior Product Manager</span>
+                                    <a class="social-link d-inline-block" href="https://twitter.com/MartinLucianoru" target="_blank">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-link d-inline-block" href="https://www.linkedin.com/in/martin-lucianoru-165668172/" target="_blank">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="p-block">
+                                        He is a product thinking digital
+                                        professional with 18 years of experience
+                                        helping businesses with Product
+                                        Management, Agile Project Management,
+                                        Product Design. He holds an MBA from
+                                        Macquarie Graduate School of Management.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="exchange" class="section text-center">
+                <div class="container section">
+                    <h2>EXCHANGE</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <img src="https://dretoken.com/img/exchange/1.png?cache=86068" />
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img src="https://dretoken.com/img/exchange/2.png?cache=86068" />
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img src="https://dretoken.com/img/exchange/3.png?cache=86068" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+		<footer class="text-center text-lg-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="https://dretoken.com/img/img-logo.png?cache=86068" width="150px" height="150px" />
+                        <li> Diamond Real Estate &copy; 2018</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1828481819e8385b1958394859e9a949fdf929e9c">[email&#160;protected]</a></li>
+                    </div>
+                    <div class="col-lg-3">
+                        <li><a href="https://t.me/joinchat/KUWnxxHFFXRVj3Ma4dhX4w" target="_blank" style="color: #fff;"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://discordapp.com/invite/GNt7Heu" target="_blank" style="color: #fff;"><i class="fab fa-discord"></i> Discord</a></li>
+                    </div>
+                    <div class="col-lg-3">
+                        <li><a href="https://www.facebook.com/Diamond-Real-Estate-272748570113916/" target="_blank" style="color: #fff;"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://medium.com/@diamondrealestate0" target="_blank" style="color: #fff;"><i class="fab fa-medium"></i> Medium</a></li>
+                        <li><a href="https://twitter.com/DiamondRealEs?lang=en" target="_blank" style="color: #fff;"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://github.com/DiamondRealEstate" target="_blank" style="color: #fff;"><i class="fab fa-github"></i> Github</a></li>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
